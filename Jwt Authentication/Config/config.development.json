@@ -1,0 +1,12 @@
+{
+  "port": 3000,
+  "database": {
+        "mongodb": {
+            "host": "mongodb-jwt-restful-eample",
+            "database": "jwtRestfullExample"
+        }
+    },
+    "auth": {
+        "secret": "test.whow.to.use.jwt"
+    }
+}

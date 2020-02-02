@@ -1,0 +1,26 @@
+{
+  "name": "test-jwt-authentication",
+  "version": "1.0.0",
+  "description": "test how to use JWT authentication with NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmed-hamdy90/Restful-API-with-Http-Authentication.git"
+  },
+  "author": "ahmedhamdy20@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmed-hamdy90/Restful-API-with-Http-Authentication/issues"
+  },
+  "homepage": "https://github.com/ahmed-hamdy90/Restful-API-with-Http-Authentication#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9",
+    "bcrypt": "^3.0.7"
+  }
+}

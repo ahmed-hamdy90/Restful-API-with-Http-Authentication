@@ -1,0 +1,5 @@
+node_modules/
+vscode/
+
+# ingone development configuration
+config/config.development.json
