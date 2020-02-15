@@ -24,7 +24,7 @@
             const dbOptions = {
                 useNewUrlParser: true,
                 useUnifiedTopology: true
-            }
+            };
             mongo.connect(dbUri, dbOptions);
             this.adapter = mongo;
         }
@@ -40,51 +40,51 @@
 
         /**
          * Saving model details on mongodb
-         * @param  {Object} model mongoose model instance
-         * @param  {function} successCallbak success callback listenter instance
-         * @param  {function} errorCallbak   error callback listenter instance
+         * @param {Object} model mongoose model instance
+         * @param {function} successCallback success callback listener instance
+         * @param {function} errorCallback error callback listener instance
          */
-        save(model, successCallbak, errorCallbak) {
+        save(model, successCallback, errorCallback) {
             model.save((err, result) => {
                 if (err) {
-                    errorCallbak(err);
+                    errorCallback(err);
                     return;
                 }
-                successCallbak(result);
+                successCallback(result);
             });
         }
 
         /**
          * find a model details on mongodb using it's id
-         * @param  {Object} model mongoose model instance
-         * @param  {number} id  id value of model's instance
-         * @param  {function} successCallbak success callback listenter instance
-         * @param  {function} errorCallbak   error callback listenter instance
+         * @param {Object} model mongoose model instance
+         * @param {number} id given model's id value
+         * @param {function} successCallback success callback listener instance
+         * @param {function} errorCallback error callback listener instance
          */
-        findById(model, id, successCallbak, errorCallbak) {
+        findById(model, id, successCallback, errorCallback) {
             model.findById(id, (err, result) => {
                 if (err) {
-                    errorCallbak(err);
+                    errorCallback(err);
                     return;
                 }
-                successCallbak(result);
+                successCallback(result);
             });
         }
 
         /**
-        * finding models details on mongodb using criteria
-        * @param  {Object} model mongoose model instance
-        * @param  {Object} criteria search criteria for models
-        * @param  {function} successCallbak success callback listenter instance
-        * @param  {function} errorCallbak   error callback listenter instance
+         * finding models details on mongodb using criteria
+         * @param {Object} model mongoose model instance
+         * @param {Object} criteria search criteria for models
+         * @param {function} successCallback success callback listener instance
+         * @param {function} errorCallback error callback listener instance
         */
-        find(model, criteria, successCallbak, errorCallbak) {
+        find(model, criteria, successCallback, errorCallback) {
             model.find(criteria, (err, result) => {
                 if (err) {
-                    errorCallbak(err);
+                    errorCallback(err);
                     return;
                 }
-                successCallbak(result);
+                successCallback(result);
             });
         }
     }

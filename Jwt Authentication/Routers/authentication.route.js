@@ -9,7 +9,7 @@
   const router = express.Router();
 
   router.post('/', (req, res) => {
-    res.send('Test');
+    res.json('Test');
 
   });
 

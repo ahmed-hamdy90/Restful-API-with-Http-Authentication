@@ -1,5 +1,6 @@
 node_modules/
 vscode/
+.idea/
 
 # ingone development configuration
 config/config.development.json
