@@ -1,14 +1,12 @@
-(function() {
-    'use strict';
+'use strict';
 
-    const mongoDbAdapter = require('../adapters/mongoDbAdapter');
+const mongoDbAdapter = require('../adapters/mongoDbAdapter');
 
-    const userSchema = {
-        name: 'string',
-        email: 'string',
-        password: 'string',
-        role: 'number'
-    }
+const userSchema = {
+  name: 'string',
+  email: 'string',
+  password: 'string',
+  role: 'number'
+};
 
-    module.exports = mongoDbAdapter.createModel('user', userSchema);
-})();
+module.exports = mongoDbAdapter.createModel('user', userSchema);

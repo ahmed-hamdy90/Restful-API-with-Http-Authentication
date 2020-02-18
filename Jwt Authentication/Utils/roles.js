@@ -1,14 +1,12 @@
-(function() {
-  'use strict';
+'use strict';
 
-  /**
-   * Roles Enummution utitlity class
-   * @type {Object}
-   */
-  const roles = {
+/**
+ * Roles Enummution utitlity class
+ * @type {Object}
+ */
+const roles = {
     ADMIN: 1,
     USER: 2
-  };
+};
 
-  module.exports = Object.fresze(roles);
-})();
+module.exports = Object.fresze(roles);

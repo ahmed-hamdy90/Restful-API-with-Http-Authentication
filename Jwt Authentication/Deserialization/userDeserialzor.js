@@ -1,27 +1,25 @@
-(function() {
-  'use strict';
+'use strict';
 
-  const Deserializor = require('./deserializor');
-  const User = require('../Entities/user');
+const Deserializor = require('./deserializor');
+const User = require('../Entities/user');
+
+/**
+ * User Deserializor class for user entity
+ */
+class UserDeserializor extends Deserializor {
 
   /**
-   * User Deserializor class for user entity
+   * {@inheritDoc}
    */
-  class UserDeserializor extends Deserializor {
+  deserialize(input) {
+    const user = new User();
+    user.id = parseInt(input.id);
+    user.name = input.name;
+    user.email = input.email;
+    user.role = input.role;
 
-      /**
-       * {@inheritDoc}
-       */
-      deserialize(input) {
-          const user = new User();
-          user.id = parseInt(input.id);
-          user.name = input.name;
-          user.email = input.email;
-          user.role = input.role;
-
-          return user;
-      }
+    return user;
   }
+}
 
-  model.export = UserDeserializor;
-})();
+model.export = UserDeserializor;

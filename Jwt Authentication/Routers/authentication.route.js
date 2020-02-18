@@ -1,17 +1,15 @@
-(function () {
-  'use strict';
+'use strict';
 
-  // load modules
-  const express = require('express');
+// load modules
+const express = require('express');
 
 
-  // initilaize express's router instance
-  const router = express.Router();
+// initilaize express's router instance
+const router = express.Router();
 
-  router.post('/', (req, res) => {
-    res.json('Test');
+router.post('/', (req, res) => {
+  res.json('Test');
 
-  });
+});
 
-  module.exports = router;
-})();
+module.exports = router;

@@ -1,37 +1,35 @@
-(function() {
-  'use strict';
+'use strict';
 
-  const AbstractEntity = require('./abstractEntity');
+const AbstractEntity = require('./abstractEntity');
+
+/**
+ * User Entity
+ */
+class User extends AbstractEntity {
 
   /**
-   * User Entity
+   * user's id
+   * @var number
    */
-  class User extends AbstractEntity {
+  id;
 
-    /**
-     * user's id
-     * @var number
-     */
-    id;
+  /**
+   * user's name
+   * @var string
+   */
+  name;
 
-    /**
-     * user's name
-     * @var string
-     */
-    name;
+  /**
+   * user's email
+   * @var string
+   */
+  email;
 
-    /**
-     * user's email
-     * @var string
-     */
-    email;
+  /**
+   * user's role
+   * @var number
+   */
+  role;
+}
 
-    /**
-     * user's role
-     * @var number
-     */
-    role;
-  }
-
-  model.export = User;
-})();
+model.export = User;

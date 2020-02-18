@@ -1,21 +1,19 @@
-(function() {
-  'use strict';
+'use strict';
+
+/**
+ * AbstractMapper represent parent class for any mapper classes
+ */
+class AbstractMapper {
+
+  mongoDbAdapter;
 
   /**
-   * AbstractMapper represent parent class for any mapper classes
+   * AbstractMapper constructor
+   * @param {MongoDbAdapter} adapter mongoDb adapter instance
    */
-  class AbstractMapper {
-
-      mongoDbAdapter;
-
-      /**
-       * AbstractMapper constructor
-       * @param {MongoDbAdapter} adapter mongoDb adapter instance
-       */
-      constructor(adapter) {
-          this.mongoDbAdapter = adapter;
-      }
+  constructor(adapter) {
+    this.mongoDbAdapter = adapter;
   }
+}
 
-  model.export = AbstractMapper;
-})();
+model.export = AbstractMapper;
